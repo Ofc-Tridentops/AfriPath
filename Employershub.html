@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employers Hub — AfriPath</title>
+  <meta name="description" content="Connect directly with job-ready African talent backed by verified skill credentials and completed industry projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header>
+  <div class="container nav">
+    <a href="Afripath.html" class="logo"><span class="logo-mark">A</span>AfriPath</a>
+    <nav class="nav-links">
+      <a href="Afripath.html">Home</a>
+      <a href="About.html">About</a>
+      
+      <!-- Services Dropdown -->
+      <div class="nav-dropdown">
+        <a href="Services.html" class="active">Services</a>
+        <div class="dropdown-menu">
+          <a href="Opportunities.html">🔎 Opportunities Finder</a>
+          <a href="skills.html">📚 Skills Finder</a>
+          <a href="Experiences.html">🛠️ Experience Builder</a>
+          <a href="Employershub.html">🏢 Employers Hub</a>
+        </div>
+      </div>
+
+      <a href="Giving.html">Giving</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="giving.html" class="btn btn-gold btn-nav-gold">💛 Support Youth</a>
+      <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-menu" id="mmenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="Services.html">Services Overview</a>
+    <div class="mobile-sub-menu">
+      <a href="opportunities.html">↳ 🔎 Opportunities Finder</a>
+      <a href="skills.html">↳ 📚 Skills Finder</a>
+      <a href="experience.html">↳ 🛠️ Experience Builder</a>
+      <a href="employers.html">↳ 🏢 Employers Hub</a>
+    </div>
+    <a href="giving.html">Giving</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">🏢 Module 04: Employers Hub</span>
+      <h1>Hire verified talent with <span>proven practical skills</span>.</h1>
+      <p>Skip resume guess-work. Filter candidates based on verified skill badges, real portfolio project scores, and regional locations across Africa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TALENT DIRECTORY & FILTERS ============ -->
+<section class="filter-section">
+  <div class="container">
+    <span class="eyebrow">Vetted Talent Directory</span>
+    <h2 class="section-title">Discover Job-Ready Candidates</h2>
+    
+    <div class="category-pills">
+      <button class="pill-btn active" onclick="filterTalent(this, 'all')">All Candidates</button>
+      <button class="pill-btn" onclick="filterTalent(this, 'dev')">Developers</button>
+      <button class="pill-btn" onclick="filterTalent(this, 'data')">Data Analysts</button>
+      <button class="pill-btn" onclick="filterTalent(this, 'design')">UI/UX Designers</button>
+      <button class="pill-btn" onclick="filterTalent(this, 'marketing')">Digital Marketers</button>
+    </div>
+
+    <!-- Candidate Cards Grid -->
+    <div class="emp-grid" id="talentGrid">
+
+      <!-- Candidate 1 -->
+      <div class="emp-card" data-category="dev">
+        <div>
+          <div class="emp-header">
+            <div class="emp-avatar">KA</div>
+            <div class="emp-title-wrap">
+              <h3>Kofi Mensah</h3>
+              <p>Front-End Web Developer • Accra, Ghana</p>
+              <span class="emp-verified-tag">✓ Verified Skill Passport</span>
+            </div>
+          </div>
+
+          <div class="emp-stats">
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">3</div>
+              <div class="emp-stat-lbl">Briefs Done</div>
+            </div>
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">96%</div>
+              <div class="emp-stat-lbl">Code Score</div>
+            </div>
+          </div>
+
+          <div class="emp-skills-list">
+            <span class="emp-skill-badge">HTML5/CSS3</span>
+            <span class="emp-skill-badge">JavaScript</span>
+            <span class="emp-skill-badge">Figma</span>
+          </div>
+        </div>
+        <div class="emp-footer">
+          <span class="emp-match-score">95% Match</span>
+          <button class="btn btn-primary" onclick="openContactModal('Kofi Mensah', 'Front-End Developer')">Request Interview →</button>
+        </div>
+      </div>
+
+      <!-- Candidate 2 -->
+      <div class="emp-card" data-category="data">
+        <div>
+          <div class="emp-header">
+            <div class="emp-avatar">AO</div>
+            <div class="emp-title-wrap">
+              <h3>Amina Okeke</h3>
+              <p>Junior Data Analyst • Lagos, Nigeria</p>
+              <span class="emp-verified-tag">✓ Verified Skill Passport</span>
+            </div>
+          </div>
+
+          <div class="emp-stats">
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">4</div>
+              <div class="emp-stat-lbl">Briefs Done</div>
+            </div>
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">92%</div>
+              <div class="emp-stat-lbl">Data Score</div>
+            </div>
+          </div>
+
+          <div class="emp-skills-list">
+            <span class="emp-skill-badge">Python</span>
+            <span class="emp-skill-badge">Pandas</span>
+            <span class="emp-skill-badge">Excel</span>
+          </div>
+        </div>
+        <div class="emp-footer">
+          <span class="emp-match-score">92% Match</span>
+          <button class="btn btn-primary" onclick="openContactModal('Amina Okeke', 'Junior Data Analyst')">Request Interview →</button>
+        </div>
+      </div>
+
+      <!-- Candidate 3 -->
+      <div class="emp-card" data-category="design">
+        <div>
+          <div class="emp-header">
+            <div class="emp-avatar">JM</div>
+            <div class="emp-title-wrap">
+              <h3>John Mwangi</h3>
+              <p>UI/UX Product Designer • Nairobi, Kenya</p>
+              <span class="emp-verified-tag">✓ Verified Skill Passport</span>
+            </div>
+          </div>
+
+          <div class="emp-stats">
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">2</div>
+              <div class="emp-stat-lbl">Briefs Done</div>
+            </div>
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">98%</div>
+              <div class="emp-stat-lbl">Design Score</div>
+            </div>
+          </div>
+
+          <div class="emp-skills-list">
+            <span class="emp-skill-badge">Figma</span>
+            <span class="emp-skill-badge">Wireframing</span>
+            <span class="emp-skill-badge">User Research</span>
+          </div>
+        </div>
+        <div class="emp-footer">
+          <span class="emp-match-score">98% Match</span>
+          <button class="btn btn-primary" onclick="openContactModal('John Mwangi', 'UI/UX Product Designer')">Request Interview →</button>
+        </div>
+      </div>
+
+      <!-- Candidate 4 -->
+      <div class="emp-card" data-category="marketing">
+        <div>
+          <div class="emp-header">
+            <div class="emp-avatar">FN</div>
+            <div class="emp-title-wrap">
+              <h3>Fatima Nkomo</h3>
+              <p>Growth & Content Marketer • Johannesburg, SA</p>
+              <span class="emp-verified-tag">✓ Verified Skill Passport</span>
+            </div>
+          </div>
+
+          <div class="emp-stats">
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">5</div>
+              <div class="emp-stat-lbl">Briefs Done</div>
+            </div>
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">90%</div>
+              <div class="emp-stat-lbl">Campaign Score</div>
+            </div>
+          </div>
+
+          <div class="emp-skills-list">
+            <span class="emp-skill-badge">Copywriting</span>
+            <span class="emp-skill-badge">SEO</span>
+            <span class="emp-skill-badge">Social Ads</span>
+          </div>
+        </div>
+        <div class="emp-footer">
+          <span class="emp-match-score">90% Match</span>
+          <button class="btn btn-primary" onclick="openContactModal('Fatima Nkomo', 'Growth & Content Marketer')">Request Interview →</button>
+        </div>
+      </div>
+
+      <!-- Candidate 5 -->
+      <div class="emp-card" data-category="dev">
+        <div>
+          <div class="emp-header">
+            <div class="emp-avatar">DT</div>
+            <div class="emp-title-wrap">
+              <h3>David Tete</h3>
+              <p>Full-Stack JavaScript Dev • Kigali, Rwanda</p>
+              <span class="emp-verified-tag">✓ Verified Skill Passport</span>
+            </div>
+          </div>
+
+          <div class="emp-stats">
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">3</div>
+              <div class="emp-stat-lbl">Briefs Done</div>
+            </div>
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">94%</div>
+              <div class="emp-stat-lbl">Code Score</div>
+            </div>
+          </div>
+
+          <div class="emp-skills-list">
+            <span class="emp-skill-badge">Node.js</span>
+            <span class="emp-skill-badge">React</span>
+            <span class="emp-skill-badge">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="emp-footer">
+          <span class="emp-match-score">94% Match</span>
+          <button class="btn btn-primary" onclick="openContactModal('David Tete', 'Full-Stack JavaScript Dev')">Request Interview →</button>
+        </div>
+      </div>
+
+      <!-- Candidate 6 -->
+      <div class="emp-card" data-category="data">
+        <div>
+          <div class="emp-header">
+            <div class="emp-avatar">SA</div>
+            <div class="emp-title-wrap">
+              <h3>Sara Hassan</h3>
+              <p>Business Intelligence Assistant • Cairo, Egypt</p>
+              <span class="emp-verified-tag">✓ Verified Skill Passport</span>
+            </div>
+          </div>
+
+          <div class="emp-stats">
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">2</div>
+              <div class="emp-stat-lbl">Briefs Done</div>
+            </div>
+            <div class="emp-stat-item">
+              <div class="emp-stat-val">89%</div>
+              <div class="emp-stat-lbl">Data Score</div>
+            </div>
+          </div>
+
+          <div class="emp-skills-list">
+            <span class="emp-skill-badge">PowerBI</span>
+            <span class="emp-skill-badge">SQL</span>
+            <span class="emp-skill-badge">Excel</span>
+          </div>
+        </div>
+        <div class="emp-footer">
+          <span class="emp-match-score">89% Match</span>
+          <button class="btn btn-primary" onclick="openContactModal('Sara Hassan', 'Business Intelligence Assistant')">Request Interview →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERVIEW REQUEST MODAL ============ -->
+<div class="modal-overlay" id="contactModal">
+  <div class="modal-card">
+    <h3 id="modalCandidateName">Request Interview</h3>
+    <p id="modalCandidateRole" class="text-muted mb-20">Candidate Role</p>
+
+    <div class="form-group">
+      <label class="form-label">Your Company / Organization Name</label>
+      <input type="text" class="form-input" placeholder="e.g. Acme Tech Africa">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Target Role / Stipend Range</label>
+      <select class="form-input">
+        <option>Paid Internship ($250 - $400 / month)</option>
+        <option>Full-Time Entry Level ($400 - $800 / month)</option>
+        <option>Project-Based Contract</option>
+      </select>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-dark" onclick="closeContactModal()">Cancel</button>
+      <button class="btn btn-gold" onclick="submitInterviewRequest()">Send Direct Invitation 📩</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Afri<span>Path</span></div>
+        <p class="mt-12 text-sm max-w-280">Reducing youth unemployment by connecting young people across Africa to opportunities, skills, practical experience and employers — in one platform.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="opportunities.html">Opportunities Finder</a>
+        <a href="skills.html">Skills Finder</a>
+        <a href="experience.html">Experience Builder</a>
+        <a href="employers.html">Employers Hub</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="Services.html">Overview</a>
+        <a href="giving.html">Giving Platform</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h4>Trust & Legal</h4>
+        <a href="index.html#trust">Verification</a>
+        <a href="contact.html">Safety & Reporting</a>
+        <a href="contact.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 AfriPath. Built for Africa's next generation.</span>
+      <span>DISCOVER → DEVELOP → EXPERIENCE → CONNECT</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ INTERACTIVE SCRIPTS ============ -->
+<script>
+  // Filter logic
+  function filterTalent(btnElement, category) {
+    document.querySelectorAll('.category-pills .pill-btn').forEach(btn => btn.classList.remove('active'));
+    btnElement.classList.add('active');
+
+    const cards = document.querySelectorAll('.emp-card');
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      if (category === 'all' || cardCat === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Modal logic
+  function openContactModal(name, role) {
+    document.getElementById('modalCandidateName').innerText = `Connect with ${name}`;
+    document.getElementById('modalCandidateRole').innerText = `Role: ${role}`;
+    document.getElementById('contactModal').classList.add('open');
+  }
+
+  function closeContactModal() {
+    document.getElementById('contactModal').classList.remove('open');
+  }
+
+  function submitInterviewRequest() {
+    alert('📩 Interview invitation sent! The candidate will receive your message and verified company details.');
+    closeContactModal();
+  }
+</script>
+
+</body>
+</html>

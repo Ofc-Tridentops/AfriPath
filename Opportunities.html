@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opportunities Finder — AfriPath</title>
+  <meta name="description" content="Search and apply for entry-level roles, internships, fellowships, and grants tailored for young African talent." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header>
+  <div class="container nav">
+    <a href="Afripath.html" class="logo"><span class="logo-mark">A</span>AfriPath</a>
+    <nav class="nav-links">
+      <a href="Afripath.html">Home</a>
+      <a href="About.html">About</a>
+      
+      <!-- Services Dropdown -->
+      <div class="nav-dropdown">
+        <a href="Services.html" class="active">Services</a>
+        <div class="dropdown-menu">
+          <a href="Opportunities.html">🔎 Opportunities Finder</a>
+          <a href="skills.html">📚 Skills Finder</a>
+          <a href="Experiences.html">🛠️ Experience Builder</a>
+          <a href="Employershub.html">🏢 Employers Hub</a>
+        </div>
+      </div>
+
+      <a href="Giving.html">Giving</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="Giving.html" class="btn btn-gold btn-nav-gold">💛 Support Youth</a>
+      <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-menu" id="mmenu">
+    <a href="Afripath.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Services.html">Services Overview</a>
+    <div class="mobile-sub-menu">
+      <a href="Opportunities.html">↳ 🔎 Opportunities Finder</a>
+      <a href="skills.html">↳ 📚 Skills Finder</a>
+      <a href="Experiences.html">↳ 🛠️ Experience Builder</a>
+      <a href="Employershub.html">↳ 🏢 Employers Hub</a>
+    </div>
+    <a href="Giving.html">Giving</a>
+    <a href="Contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">🔎 Module 01: Opportunities Finder</span>
+      <h1>Discover verified <span>career opportunities</span> across Africa.</h1>
+      <p>Search vetted entry-level jobs, paid internships, micro-grants, and skills fellowships designed for rising talent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE SEARCH & FILTERS ============ -->
+<section class="filter-section">
+  <div class="container">
+    <div class="search-filter-box">
+      <div class="search-input-wrapper">
+        <input type="text" id="searchInput" placeholder="Search by job title, skill, or keyword (e.g. Developer, Marketing, Data)..." onkeyup="filterOpportunities()">
+      </div>
+      
+      <select id="locationSelect" class="filter-select" onchange="filterOpportunities()">
+        <option value="all">All Locations</option>
+        <option value="remote">Remote</option>
+        <option value="kenya">Kenya</option>
+        <option value="nigeria">Nigeria</option>
+        <option value="ghana">Ghana</option>
+        <option value="south-africa">South Africa</option>
+      </select>
+    </div>
+
+    <div class="category-pills">
+      <button class="pill-btn active" onclick="filterCategory(this, 'all')">All Opportunities</button>
+      <button class="pill-btn" onclick="filterCategory(this, 'internship')">Paid Internships</button>
+      <button class="pill-btn" onclick="filterCategory(this, 'entry-level')">Entry-Level Roles</button>
+      <button class="pill-btn" onclick="filterCategory(this, 'grant')">Grants & Fellowships</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE OPPORTUNITIES GRID ============ -->
+<section>
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h3>Available Listings</h3>
+      <span id="resultsCount" style="color:var(--muted); font-size:14px; font-weight:600;">Showing 6 opportunities</span>
+    </div>
+
+    <div class="opportunities-grid" id="oppsGrid">
+
+      <!-- Listing 1 -->
+      <div class="opp-card" data-category="internship" data-location="remote" data-title="Junior Web Developer Front-End HTML CSS JavaScript">
+        <div>
+          <div class="opp-card-header">
+            <div class="opp-company-logo">TC</div>
+            <span class="opp-badge badge-green">Verified Listing</span>
+          </div>
+          <h3>Junior Web Developer</h3>
+          <div class="opp-meta">
+            <span>🏢 TechCorp Africa</span>
+            <span>•</span>
+            <span>📍 Remote (Lagos/Nairobi)</span>
+          </div>
+          <p class="opp-desc">Assist in building responsive web applications and landing pages for pan-African client brands.</p>
+          <div class="opp-tags">
+            <span class="opp-tag">HTML/CSS</span>
+            <span class="opp-tag">JavaScript</span>
+            <span class="opp-tag">Entry Level</span>
+          </div>
+        </div>
+        <div class="opp-card-footer">
+          <span class="opp-stipend">$350 / month</span>
+          <button class="btn btn-primary" onclick="openApplyModal('Junior Web Developer', 'TechCorp Africa')">Apply Now</button>
+        </div>
+      </div>
+
+      <!-- Listing 2 -->
+      <div class="opp-card" data-category="entry-level" data-location="kenya" data-title="Data Entry Analytics Assistant Excel Python">
+        <div>
+          <div class="opp-card-header">
+            <div class="opp-company-logo">AF</div>
+            <span class="opp-badge badge-green">Verified Listing</span>
+          </div>
+          <h3>Data Analytics Assistant</h3>
+          <div class="opp-meta">
+            <span>🏢 AfriFinance</span>
+            <span>•</span>
+            <span>📍 Nairobi, Kenya</span>
+          </div>
+          <p class="opp-desc">Clean, organize, and analyze customer trend datasets using Excel and basic Python tools.</p>
+          <div class="opp-tags">
+            <span class="opp-tag">Excel</span>
+            <span class="opp-tag">Python</span>
+            <span class="opp-tag">Full-Time</span>
+          </div>
+        </div>
+        <div class="opp-card-footer">
+          <span class="opp-stipend">$450 / month</span>
+          <button class="btn btn-primary" onclick="openApplyModal('Data Analytics Assistant', 'AfriFinance')">Apply Now</button>
+        </div>
+      </div>
+
+      <!-- Listing 3 -->
+      <div class="opp-card" data-category="grant" data-location="remote" data-title="Youth Entrepreneur Innovation Grant Startup Business">
+        <div>
+          <div class="opp-card-header">
+            <div class="opp-company-logo">AP</div>
+            <span class="opp-badge badge-gold">Micro-Grant</span>
+          </div>
+          <h3>Youth Innovation Grant 2026</h3>
+          <div class="opp-meta">
+            <span>🏢 AfriPath Seed Fund</span>
+            <span>•</span>
+            <span>📍 Remote</span>
+          </div>
+          <p class="opp-desc">Seed grant funding and 3 months of technical mentorship for early-stage tech & business ideas.</p>
+          <div class="opp-tags">
+            <span class="opp-tag">Entrepreneurship</span>
+            <span class="opp-tag">Grant</span>
+            <span class="opp-tag">No Exp Required</span>
+          </div>
+        </div>
+        <div class="opp-card-footer">
+          <span class="opp-stipend">$1,000 Grant</span>
+          <button class="btn btn-gold" onclick="openApplyModal('Youth Innovation Grant 2026', 'AfriPath Seed Fund')">Apply for Grant</button>
+        </div>
+      </div>
+
+      <!-- Listing 4 -->
+      <div class="opp-card" data-category="internship" data-location="nigeria" data-title="Digital Marketing Social Media Assistant Content Creation">
+        <div>
+          <div class="opp-card-header">
+            <div class="opp-company-logo">NS</div>
+            <span class="opp-badge badge-green">Verified Listing</span>
+          </div>
+          <h3>Digital Marketing Intern</h3>
+          <div class="opp-meta">
+            <span>🏢 Nexus Studio</span>
+            <span>•</span>
+            <span>📍 Lagos, Nigeria</span>
+          </div>
+          <p class="opp-desc">Manage social media accounts, draft promotional copy, and track engagement analytics.</p>
+          <div class="opp-tags">
+            <span class="opp-tag">Copywriting</span>
+            <span class="opp-tag">Social Media</span>
+            <span class="opp-tag">Internship</span>
+          </div>
+        </div>
+        <div class="opp-card-footer">
+          <span class="opp-stipend">$250 / month</span>
+          <button class="btn btn-primary" onclick="openApplyModal('Digital Marketing Intern', 'Nexus Studio')">Apply Now</button>
+        </div>
+      </div>
+
+      <!-- Listing 5 -->
+      <div class="opp-card" data-category="entry-level" data-location="ghana" data-title="Junior UX UI Product Designer Figma Web Design">
+        <div>
+          <div class="opp-card-header">
+            <div class="opp-company-logo">GL</div>
+            <span class="opp-badge badge-green">Verified Listing</span>
+          </div>
+          <h3>Junior UI/UX Designer</h3>
+          <div class="opp-meta">
+            <span>🏢 GrowthLabs</span>
+            <span>•</span>
+            <span>📍 Accra, Ghana</span>
+          </div>
+          <p class="opp-desc">Design wireframes and user interfaces in Figma for digital products across West Africa.</p>
+          <div class="opp-tags">
+            <span class="opp-tag">Figma</span>
+            <span class="opp-tag">UI/UX</span>
+            <span class="opp-tag">Portfolio Required</span>
+          </div>
+        </div>
+        <div class="opp-card-footer">
+          <span class="opp-stipend">$400 / month</span>
+          <button class="btn btn-primary" onclick="openApplyModal('Junior UI/UX Designer', 'GrowthLabs')">Apply Now</button>
+        </div>
+      </div>
+
+      <!-- Listing 6 -->
+      <div class="opp-card" data-category="grant" data-location="south-africa" data-title="Green Energy Leadership Fellowship Sustainability">
+        <div>
+          <div class="opp-card-header">
+            <div class="opp-company-logo">EF</div>
+            <span class="opp-badge badge-gold">Fellowship</span>
+          </div>
+          <h3>Green Energy Leadership Fellowship</h3>
+          <div class="opp-meta">
+            <span>🏢 EcoFuture Africa</span>
+            <span>•</span>
+            <span>📍 Johannesburg, SA</span>
+          </div>
+          <p class="opp-desc">A 6-month stipend-backed fellowship training young leaders in renewable energy projects.</p>
+          <div class="opp-tags">
+            <span class="opp-tag">Sustainability</span>
+            <span class="opp-tag">Fellowship</span>
+            <span class="opp-tag">Paid Training</span>
+          </div>
+        </div>
+        <div class="opp-card-footer">
+          <span class="opp-stipend">$500 / month</span>
+          <button class="btn btn-gold" onclick="openApplyModal('Green Energy Leadership Fellowship', 'EcoFuture Africa')">Apply for Fellowship</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE APPLICATION MODAL ============ -->
+<div class="modal-overlay" id="applyModal">
+  <div class="modal-card">
+    <h3 id="modalJobTitle">Apply for Role</h3>
+    <p id="modalCompany">Company Name</p>
+    <div style="margin-bottom:20px;">
+      <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Your AfriPath Profile ID</label>
+      <input type="text" value="AP-YOUTH-2026-889" readonly style="width:100%; padding:12px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--muted); font-family:'Inter',sans-serif;">
+    </div>
+    <div style="margin-bottom:24px;">
+      <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Attach Verified Skill Passport?</label>
+      <select style="width:100%; padding:12px; border:1px solid var(--line); border-radius:8px; font-family:'Inter',sans-serif;">
+        <option>Yes — Include My Verified Skill Badges & Projects</option>
+        <option>Standard Application Only</option>
+      </select>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-dark" onclick="closeApplyModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="submitApplication()">Confirm Application 🚀</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Afri<span>Path</span></div>
+        <p style="margin-top:12px;font-size:14px;max-width:280px">Reducing youth unemployment by connecting young people across Africa to opportunities, skills, practical experience and employers — in one platform.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="opportunities.html">Opportunities Finder</a>
+        <a href="skills.html">Skills Finder</a>
+        <a href="experience.html">Experience Builder</a>
+        <a href="employers.html">Employers Hub</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="Services.html">Overview</a>
+        <a href="giving.html">Giving Platform</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h4>Trust & Legal</h4>
+        <a href="index.html#trust">Verification</a>
+        <a href="contact.html">Safety & Reporting</a>
+        <a href="contact.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 AfriPath. Built for Africa's next generation.</span>
+      <span>DISCOVER → DEVELOP → EXPERIENCE → CONNECT</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ INTERACTIVE FILTER SCRIPT ============ -->
+<script>
+  let currentCategory = 'all';
+
+  function filterCategory(btnElement, category) {
+    document.querySelectorAll('.pill-btn').forEach(btn => btn.classList.remove('active'));
+    btnElement.classList.add('active');
+    currentCategory = category;
+    filterOpportunities();
+  }
+
+  function filterOpportunities() {
+    const searchVal = document.getElementById('searchInput').value.toLowerCase();
+    const locationVal = document.getElementById('locationSelect').value.toLowerCase();
+    const cards = document.querySelectorAll('.opp-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      const cardLocation = card.getAttribute('data-location');
+      const cardTitle = card.getAttribute('data-title').toLowerCase();
+
+      const matchesSearch = cardTitle.includes(searchVal);
+      const matchesCategory = (currentCategory === 'all' || cardCategory === currentCategory);
+      const matchesLocation = (locationVal === 'all' || cardLocation === locationVal);
+
+      if (matchesSearch && matchesCategory && matchesLocation) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    document.getElementById('resultsCount').innerText = `Showing ${visibleCount} opportunity/opportunities`;
+  }
+
+  // Modal logic
+  function openApplyModal(title, company) {
+    document.getElementById('modalJobTitle').innerText = `Apply for ${title}`;
+    document.getElementById('modalCompany').innerText = `With ${company}`;
+    document.getElementById('applyModal').classList.add('open');
+  }
+
+  function closeApplyModal() {
+    document.getElementById('applyModal').classList.remove('open');
+  }
+
+  function submitApplication() {
+    alert('🎉 Application successfully submitted! Your verified AfriPath Passport was sent to the employer.');
+    closeApplyModal();
+  }
+</script>
+
+</body>
+</html>

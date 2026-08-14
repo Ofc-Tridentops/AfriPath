@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills Finder — AfriPath</title>
+  <meta name="description" content="Assess your skills, close qualification gaps, and earn verified skill badges for top African employers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header>
+  <div class="container nav">
+    <a href="Afripath.html" class="logo"><span class="logo-mark">A</span>AfriPath</a>
+    <nav class="nav-links">
+      <a href="Afripath.html">Home</a>
+      <a href="About.html">About</a>
+      
+      <!-- Services Dropdown -->
+      <div class="nav-dropdown">
+        <a href="Services.html" class="active">Services</a>
+        <div class="dropdown-menu">
+          <a href="Opportunities.html">🔎 Opportunities Finder</a>
+          <a href="skills.html">📚 Skills Finder</a>
+          <a href="Experiences.html">🛠️ Experience Builder</a>
+          <a href="Employershub.html">🏢 Employers Hub</a>
+        </div>
+      </div>
+
+      <a href="Giving.html">Giving</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="Giving.html" class="btn btn-gold btn-nav-gold">💛 Support Youth</a>
+      <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-menu" id="mmenu">
+    <a href="Afripath.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Services.html">Services Overview</a>
+    <div class="mobile-sub-menu">
+      <a href="Opportunities.html">↳ 🔎 Opportunities Finder</a>
+      <a href="skills.html">↳ 📚 Skills Finder</a>
+      <a href="Experiences.html">↳ 🛠️ Experience Builder</a>
+      <a href="Employershub.html">↳ 🏢 Employers Hub</a>
+    </div>
+    <a href="Giving.html">Giving</a>
+    <a href="Contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">📚 Module 02: Skills Finder</span>
+      <h1>Bridge your skill gaps with <span>verified pathways</span>.</h1>
+      <p>Assess your workplace readiness, follow micro-learning roadmaps, and earn digital skill badges recognized by hiring managers across the continent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIAGNOSTIC TOOL ============ -->
+<section>
+  <div class="container">
+    <span class="eyebrow">Interactive Assessment</span>
+    <h2 class="section-title">Take the 2-Minute Skill Diagnostic</h2>
+    
+    <div class="skills-diagnostic">
+      <div class="diagnostic-grid">
+        <div class="diagnostic-info">
+          <h3>Unsure where to start?</h3>
+          <p>Select your career focus and answer a sample diagnostic question to receive custom course recommendations tailored to your experience level.</p>
+          <div style="display:flex; gap:16px;">
+            <button class="pill-btn active" onclick="setTrack('tech', this)">💻 Software & Data</button>
+            <button class="pill-btn" onclick="setTrack('business', this)">📈 Business & Growth</button>
+          </div>
+        </div>
+
+        <div class="diagnostic-box" id="diagnosticQuiz">
+          <p id="quizQuestion" style="font-weight:700; margin-bottom:16px;">Question 1: What is your current comfort level with writing computer code or working with databases?</p>
+          
+          <label class="quiz-option">
+            <input type="radio" name="q1" value="beginner"> Complete Beginner (Never written code before)
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="q1" value="intermediate"> Basic Knowledge (Familiar with HTML or basic formulas)
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="q1" value="advanced"> Practical Experience (Built small projects or analyzed data)
+          </label>
+
+          <button class="btn btn-primary" onclick="calculateSkillResult()" style="margin-top:12px; width:100%;">Get Custom Recommendation →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSE & BADGE LIBRARY ============ -->
+<section class="filter-section">
+  <div class="container">
+    <span class="eyebrow">Curated Micro-Courses</span>
+    <h2 class="section-title">Browse Skill Badges & Pathways</h2>
+    
+    <div class="category-pills">
+      <button class="pill-btn active" onclick="filterSkills(this, 'all')">All Pathways</button>
+      <button class="pill-btn" onclick="filterSkills(this, 'dev')">Web & Software</button>
+      <button class="pill-btn" onclick="filterSkills(this, 'data')">Data & Analytics</button>
+      <button class="pill-btn" onclick="filterSkills(this, 'design')">UI/UX & Creative</button>
+      <button class="pill-btn" onclick="filterSkills(this, 'soft')">Professional Skills</button>
+    </div>
+
+    <div class="skills-grid" id="skillsGrid">
+
+      <!-- Course 1 -->
+      <div class="skill-card" data-category="dev">
+        <div>
+          <div class="skill-icon-wrapper">🌐</div>
+          <span class="skill-level-tag">Beginner Friendly</span>
+          <h3>Front-End Web Essentials</h3>
+          <p>Master HTML5, CSS3, and modern layout techniques (Flexbox & Grid) to build real responsive websites.</p>
+        </div>
+        <div>
+          <div class="skill-meta">
+            <span>Estimated Time: 15 Hours</span>
+            <span>Badge Included</span>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill p-80"></div></div>
+          <button class="btn btn-primary" style="width:100%;" onclick="openEnrollModal('Front-End Web Essentials')">Enroll in Pathway →</button>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="skill-card" data-category="data">
+        <div>
+          <div class="skill-icon-wrapper">🐍</div>
+          <span class="skill-level-tag">Intermediate</span>
+          <h3>Python Data Analytics Basics</h3>
+          <p>Learn how to clean, transform, and visualize business datasets using Pandas, Matplotlib, and Jupyter notebooks.</p>
+        </div>
+        <div>
+          <div class="skill-meta">
+            <span>Estimated Time: 20 Hours</span>
+            <span>Badge Included</span>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill p-40"></div></div>
+          <button class="btn btn-primary" style="width:100%;" onclick="openEnrollModal('Python Data Analytics Basics')">Enroll in Pathway →</button>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="skill-card" data-category="design">
+        <div>
+          <div class="skill-icon-wrapper">🎨</div>
+          <span class="skill-level-tag">Beginner Friendly</span>
+          <h3>UI/UX Wireframing in Figma</h3>
+          <p>Understand design hierarchy, user research basics, and interactive prototype creation for mobile apps.</p>
+        </div>
+        <div>
+          <div class="skill-meta">
+            <span>Estimated Time: 12 Hours</span>
+            <span>Badge Included</span>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill p-60"></div></div>
+          <button class="btn btn-primary" style="width:100%;" onclick="openEnrollModal('UI/UX Wireframing in Figma')">Enroll in Pathway →</button>
+        </div>
+      </div>
+
+      <!-- Course 4 -->
+      <div class="skill-card" data-category="soft">
+        <div>
+          <div class="skill-icon-wrapper">💬</div>
+          <span class="skill-level-tag">All Levels</span>
+          <h3>Workplace Communication & Ethics</h3>
+          <p>Develop high-demand soft skills: professional email writing, remote team collaboration, and client negotiation.</p>
+        </div>
+        <div>
+          <div class="skill-meta">
+            <span>Estimated Time: 8 Hours</span>
+            <span>Badge Included</span>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill p-80"></div></div>
+          <button class="btn btn-primary" style="width:100%;" onclick="openEnrollModal('Workplace Communication & Ethics')">Enroll in Pathway →</button>
+        </div>
+      </div>
+
+      <!-- Course 5 -->
+      <div class="skill-card" data-category="dev">
+        <div>
+          <div class="skill-icon-wrapper">⚡</div>
+          <span class="skill-level-tag">Intermediate</span>
+          <h3>JavaScript Logic & DOM Manipulation</h3>
+          <p>Add dynamic interactivity, handles user input, and build client-side web applications from scratch.</p>
+        </div>
+        <div>
+          <div class="skill-meta">
+            <span>Estimated Time: 25 Hours</span>
+            <span>Badge Included</span>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill p-20"></div></div>
+          <button class="btn btn-primary" style="width:100%;" onclick="openEnrollModal('JavaScript Logic')">Enroll in Pathway →</button>
+        </div>
+      </div>
+
+      <!-- Course 6 -->
+      <div class="skill-card" data-category="soft">
+        <div>
+          <div class="skill-icon-wrapper">💼</div>
+          <span class="skill-level-tag">All Levels</span>
+          <h3>Digital Freelancing & Client Pitching</h3>
+          <p>Learn how to package your skills, price your work, win client contracts online, and manage payments safely.</p>
+        </div>
+        <div>
+          <div class="skill-meta">
+            <span>Estimated Time: 10 Hours</span>
+            <span>Badge Included</span>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill p-60"></div></div>
+          <button class="btn btn-primary" style="width:100%;" onclick="openEnrollModal('Digital Freelancing')">Enroll in Pathway →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE ENROLLMENT MODAL ============ -->
+<div class="modal-overlay" id="enrollModal">
+  <div class="modal-card">
+    <h3 id="modalCourseTitle">Enroll in Pathway</h3>
+    <p>Complete micro-modules at your own pace and earn a verified skill credential.</p>
+    
+    <div style="margin-bottom:20px;">
+      <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px;">Learning Pace Preference</label>
+      <select style="width:100%; padding:12px; border:1px solid var(--line); border-radius:8px; font-family:'Inter',sans-serif;">
+        <option>Self-Paced (2-3 hours per week)</option>
+        <option>Intensive Bootcamp (10+ hours per week)</option>
+      </select>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-dark" onclick="closeEnrollModal()">Cancel</button>
+      <button class="btn btn-gold" onclick="submitEnrollment()">Start Learning 🎓</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Afri<span>Path</span></div>
+        <p style="margin-top:12px;font-size:14px;max-width:280px">Reducing youth unemployment by connecting young people across Africa to opportunities, skills, practical experience and employers — in one platform.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="opportunities.html">Opportunities Finder</a>
+        <a href="skills.html">Skills Finder</a>
+        <a href="experience.html">Experience Builder</a>
+        <a href="employers.html">Employers Hub</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="Services.html">Overview</a>
+        <a href="giving.html">Giving Platform</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h4>Trust & Legal</h4>
+        <a href="index.html#trust">Verification</a>
+        <a href="contact.html">Safety & Reporting</a>
+        <a href="contact.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 AfriPath. Built for Africa's next generation.</span>
+      <span>DISCOVER → DEVELOP → EXPERIENCE → CONNECT</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ INTERACTIVE SCRIPTS ============ -->
+<script>
+  // Filter logic
+  function filterSkills(btnElement, category) {
+    document.querySelectorAll('.category-pills .pill-btn').forEach(btn => btn.classList.remove('active'));
+    btnElement.classList.add('active');
+
+    const cards = document.querySelectorAll('.skill-card');
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      if (category === 'all' || cardCat === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Diagnostic Quiz logic
+  let activeTrack = 'tech';
+  function setTrack(track, btn) {
+    activeTrack = track;
+    document.querySelectorAll('.diagnostic-info .pill-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const questionEl = document.getElementById('quizQuestion');
+    if (track === 'tech') {
+      questionEl.innerText = 'Question 1: What is your current comfort level with writing computer code or working with databases?';
+    } else {
+      questionEl.innerText = 'Question 1: What is your current experience with managing digital marketing campaigns or sales funnels?';
+    }
+  }
+
+  function calculateSkillResult() {
+    const selected = document.querySelector('input[name="q1"]:checked');
+    if (!selected) {
+      alert('Please select an option first!');
+      return;
+    }
+    
+    if (selected.value === 'beginner') {
+      alert('🎯 Recommendation: We suggest starting with "Front-End Web Essentials" or "Workplace Communication" to build foundational skills!');
+    } else {
+      alert('🚀 Recommendation: You are ready for intermediate tracks like "Python Data Analytics" or "JavaScript Logic"!');
+    }
+  }
+
+  // Modal logic
+  function openEnrollModal(title) {
+    document.getElementById('modalCourseTitle').innerText = `Enroll in ${title}`;
+    document.getElementById('enrollModal').classList.add('open');
+  }
+
+  function closeEnrollModal() {
+    document.getElementById('enrollModal').classList.remove('open');
+  }
+
+  function submitEnrollment() {
+    alert('🎉 Successfully enrolled! Check your AfriPath dashboard to start your first module.');
+    closeEnrollModal();
+  }
+</script>
+
+</body>
+</html>

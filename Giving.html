@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giving Platform — AfriPath</title>
+  <meta name="description" content="Support young African innovators and job seekers with direct skill sponsorships, connectivity grants, and laptop funding." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header>
+  <div class="container nav">
+    <a href="Afripath.html" class="logo"><span class="logo-mark">A</span>AfriPath</a>
+    <nav class="nav-links">
+      <a href="Afripath.html">Home</a>
+      <a href="about.html">About</a>
+      
+      <!-- Services Dropdown -->
+      <div class="nav-dropdown">
+        <a href="Services.html">Services</a>
+        <div class="dropdown-menu">
+          <a href="Opportunities.html">🔎 Opportunities Finder</a>
+          <a href="skills.html">📚 Skills Finder</a>
+          <a href="Experiences.html">🛠️ Experience Builder</a>
+          <a href="Employershub.html">🏢 Employers Hub</a>
+        </div>
+      </div>
+
+      <a href="Giving.html" class="active">Giving</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="Giving.html" class="btn btn-gold btn-nav-gold">💛 Support Youth</a>
+      <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-menu" id="mmenu">
+    <a href="Afripath.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Services.html">Services Overview</a>
+    <div class="mobile-sub-menu">
+      <a href="opportunities.html">↳ 🔎 Opportunities Finder</a>
+      <a href="skills.html">↳ 📚 Skills Finder</a>
+      <a href="Experiences.html">↳ 🛠️ Experience Builder</a>
+      <a href="Employershub.html">↳ 🏢 Employers Hub</a>
+    </div>
+    <a href="Giving.html">Giving</a>
+    <a href="Contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">💛 AfriPath Giving Platform</span>
+      <h1>Invest directly in <span>Africa’s future leaders</span>.</h1>
+      <p>Remove the financial barriers standing between talented youth and dignified employment. Your support funds verified skill certifications, high-speed data bundles, and micro-project stipends.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT CALCULATOR ============ -->
+<section>
+  <div class="container">
+    <span class="eyebrow">Interactive Calculator</span>
+    <h2 class="section-title">See Your Potential Direct Impact</h2>
+    
+    <div class="calculator-box">
+      <div class="calc-grid">
+        <div>
+          <h3>Select Investment Level</h3>
+          <p class="text-muted mb-20">Choose an amount to see how many young African job seekers receive direct support.</p>
+          
+          <div class="calc-buttons">
+            <button class="calc-btn" onclick="updateImpact(25, this)">$25</button>
+            <button class="calc-btn active" onclick="updateImpact(50, this)">$50</button>
+            <button class="calc-btn" onclick="updateImpact(150, this)">$150</button>
+            <button class="calc-btn" onclick="updateImpact(500, this)">$500</button>
+          </div>
+        </div>
+
+        <div class="calc-result-card">
+          <div class="calc-result-number" id="calcStudents">1 Youth</div>
+          <p class="calc-result-text" id="calcDescription">Fully sponsored through a accredited micro-certification pathway with data access.</p>
+          <button class="btn btn-gold w-full" onclick="openDonateModal('Custom Support', 50)">Sponsor Now 💛</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPONSORSHIP TIERS ============ -->
+<section class="filter-section">
+  <div class="container">
+    <span class="eyebrow">Sponsorship Pathways</span>
+    <h2 class="section-title">Targeted Youth Empowerment Funds</h2>
+
+    <div class="category-pills">
+      <button class="pill-btn active" onclick="filterTiers(this, 'all')">All Sponsorships</button>
+      <button class="pill-btn" onclick="filterTiers(this, 'individual')">Individual Learner</button>
+      <button class="pill-btn" onclick="filterTiers(this, 'tech')">Hardware & Connectivity</button>
+      <button class="pill-btn" onclick="filterTiers(this, 'community')">Community Hubs</button>
+    </div>
+
+    <div class="giving-grid" id="givingGrid">
+
+      <!-- Tier 1 -->
+      <div class="giving-card" data-category="individual">
+        <div class="giving-card-header">
+          <span class="giving-badge">Skill Certification</span>
+          <div class="giving-amount">$30 <span>/ youth</span></div>
+          <h3>Skill Badge Pass</h3>
+          <p>Covers exam fees, badge verification, and employer portfolio hosting for one young person.</p>
+          
+          <ul class="impact-list">
+            <li>1 Verified Digital Skill Badge</li>
+            <li>Lifetime Access to Employer Directory</li>
+            <li>Personalized Mentor Review</li>
+          </ul>
+        </div>
+        <button class="btn btn-primary w-full" onclick="openDonateModal('Skill Badge Pass', 30)">Sponsor $30 →</button>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="giving-card" data-category="tech">
+        <div class="giving-card-header">
+          <span class="giving-badge">Internet Access</span>
+          <div class="giving-amount">$75 <span>/ learner</span></div>
+          <h3>Data & Learning Grant</h3>
+          <p>Provides 3 months of reliable mobile internet data for remote project work and course completion.</p>
+
+          <ul class="impact-list">
+            <li>3 Months High-Speed Internet Bundle</li>
+            <li>Cloud Workspace Tools Access</li>
+            <li>Weekly Progress Tracking</li>
+          </ul>
+        </div>
+        <button class="btn btn-primary w-full" onclick="openDonateModal('Data & Learning Grant', 75)">Sponsor $75 →</button>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="giving-card" data-category="tech">
+        <div class="giving-card-header">
+          <span class="giving-badge">Hardware Fund</span>
+          <div class="giving-amount">$300 <span>/ laptop</span></div>
+          <h3>Refurbished Laptop Sponsorship</h3>
+          <p>Equips a high-performing talent from underserved rural communities with a reliable laptop.</p>
+
+          <ul class="impact-list">
+            <li>1 Refurbished Developer-Ready Laptop</li>
+            <li>1-Year Maintenance Guarantee</li>
+            <li>Direct Thank-You Note from Learner</li>
+          </ul>
+        </div>
+        <button class="btn btn-primary w-full" onclick="openDonateModal('Refurbished Laptop Sponsorship', 300)">Sponsor $300 →</button>
+      </div>
+
+      <!-- Tier 4 -->
+      <div class="giving-card" data-category="community">
+        <div class="giving-card-header">
+          <span class="giving-badge">Community Level</span>
+          <div class="giving-amount">$1,000 <span>/ cohort</span></div>
+          <h3>Regional Cohort Sponsor</h3>
+          <p>Funds an entire group of 20 youth through a 6-week intensive Experience Builder bootcamp.</p>
+
+          <ul class="impact-list">
+            <li>20 Certified Youth Graduates</li>
+            <li>Corporate Recognition on AfriPath</li>
+            <li>Custom Cohort Performance Report</li>
+          </ul>
+        </div>
+        <button class="btn btn-primary w-full" onclick="openDonateModal('Regional Cohort Sponsor', 1000)">Sponsor $1,000 →</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ DONATION MODAL ============ -->
+<div class="modal-overlay" id="donateModal">
+  <div class="modal-card">
+    <h3 id="modalTierTitle">Support Youth Opportunity</h3>
+    <p class="text-muted mb-20">100% of direct youth sponsorships go toward student credentials and resources.</p>
+
+    <div class="form-group">
+      <label class="form-label">Contribution Amount ($ USD)</label>
+      <input type="number" id="donateAmountInput" class="form-input" value="50">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Frequency</label>
+      <select class="form-input">
+        <option>One-Time Support</option>
+        <option>Monthly Recurring Impact</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Full Name or Corporate Partner</label>
+      <input type="text" class="form-input" placeholder="e.g. Sarah Jenkins or TechCorp Foundation">
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-dark" onclick="closeDonateModal()">Cancel</button>
+      <button class="btn btn-gold" onclick="submitDonation()">Complete Sponsorship 💛</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Afri<span>Path</span></div>
+        <p class="mt-12 text-sm max-w-280">Reducing youth unemployment by connecting young people across Africa to opportunities, skills, practical experience and employers — in one platform.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="opportunities.html">Opportunities Finder</a>
+        <a href="skills.html">Skills Finder</a>
+        <a href="experience.html">Experience Builder</a>
+        <a href="employers.html">Employers Hub</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="Services.html">Overview</a>
+        <a href="giving.html">Giving Platform</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h4>Trust & Legal</h4>
+        <a href="index.html#trust">Verification</a>
+        <a href="contact.html">Safety & Reporting</a>
+        <a href="contact.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 AfriPath. Built for Africa's next generation.</span>
+      <span>DISCOVER → DEVELOP → EXPERIENCE → CONNECT</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ INTERACTIVE SCRIPTS ============ -->
+<script>
+  let currentSelectedAmount = 50;
+
+  // Impact Calculator logic
+  function updateImpact(amount, btnElement) {
+    currentSelectedAmount = amount;
+    document.querySelectorAll('.calc-btn').forEach(b => b.classList.remove('active'));
+    btnElement.classList.add('active');
+
+    const resultNum = document.getElementById('calcStudents');
+    const resultDesc = document.getElementById('calcDescription');
+
+    if (amount === 25) {
+      resultNum.innerText = '1 Youth';
+      resultDesc.innerText = 'Provides internet data bundle and skill credential exam fees for 1 learner.';
+    } else if (amount === 50) {
+      resultNum.innerText = '2 Youth';
+      resultDesc.innerText = 'Fully sponsors 2 youth through accredited micro-learning pathways with verified badges.';
+    } else if (amount === 150) {
+      resultNum.innerText = '5 Youth';
+      resultDesc.innerText = 'Sponsors 5 youth with full skill pathways, data bundles, and employer matching.';
+    } else if (amount === 500) {
+      resultNum.innerText = '1 Community Hub';
+      resultDesc.innerText = 'Funds computer access and high-speed satellite Wi-Fi for an entire local community learning center.';
+    }
+  }
+
+  // Filter Tiers logic
+  function filterTiers(btnElement, category) {
+    document.querySelectorAll('.category-pills .pill-btn').forEach(btn => btn.classList.remove('active'));
+    btnElement.classList.add('active');
+
+    const cards = document.querySelectorAll('.giving-card');
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      if (category === 'all' || cardCat === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Modal logic
+  function openDonateModal(title, amount) {
+    document.getElementById('modalTierTitle').innerText = title;
+    document.getElementById('donateAmountInput').value = amount || currentSelectedAmount;
+    document.getElementById('donateModal').classList.add('open');
+  }
+
+  function closeDonateModal() {
+    document.getElementById('donateModal').classList.remove('open');
+  }
+
+  function submitDonation() {
+    alert('💛 Thank you for your support! You will receive an official tax receipt and impact updates on sponsored youth.');
+    closeDonateModal();
+  }
+</script>
+
+</body>
+</html>

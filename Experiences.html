@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience Builder — AfriPath</title>
+  <meta name="description" content="Break the 'no experience, no job' trap. Complete real-world micro-projects and build a verified career portfolio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header>
+  <div class="container nav">
+    <a href="Afripath.html" class="logo"><span class="logo-mark">A</span>AfriPath</a>
+    <nav class="nav-links">
+      <a href="Afripath.html">Home</a>
+      <a href="About.html">About</a>
+
+      <!-- Services Dropdown -->
+      <div class="nav-dropdown">
+        <a href="Services.html" class="active">Services</a>
+        <div class="dropdown-menu">
+          <a href="Opportunities.html">🔎 Opportunities Finder</a>
+          <a href="skills.html">📚 Skills Finder</a>
+          <a href="Experiences.html">🛠️ Experience Builder</a>
+          <a href="Employershub.html">🏢 Employers Hub</a>
+        </div>
+      </div>
+
+      <a href="Giving.html">Giving</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="Giving.html" class="btn btn-gold btn-nav-gold">💛 Support Youth</a>
+      <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-menu" id="mmenu">
+    <a href="Afripath.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Services.html">Services Overview</a>
+    <div class="mobile-sub-menu">
+      <a href="Opportunities.html">↳ 🔎 Opportunities Finder</a>
+      <a href="skills.html">↳ 📚 Skills Finder</a>
+      <a href="Experiences.html">↳ 🛠️ Experience Builder</a>
+      <a href="Employershub.html">↳ 🏢 Employers Hub</a>
+    </div>
+    <a href="Giving.html">Giving</a>
+    <a href="Contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">🛠️ Module 03: Experience Builder</span>
+      <h1>Build real portfolio work, <span>prove your value</span>.</h1>
+      <p>Overcome the experience barrier. Complete real industry briefs provided by African startups and partner organizations to earn employer-verified project sign-offs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT BRIEF FILTERS ============ -->
+<section class="filter-section">
+  <div class="container">
+    <span class="eyebrow">Industry Briefs</span>
+    <h2 class="section-title">Select a Real-World Project Brief</h2>
+    
+    <div class="category-pills">
+      <button class="pill-btn active" onclick="filterProjects(this, 'all')">All Briefs</button>
+      <button class="pill-btn" onclick="filterProjects(this, 'web')">Web & Mobile</button>
+      <button class="pill-btn" onclick="filterProjects(this, 'data')">Data & Analytics</button>
+      <button class="pill-btn" onclick="filterProjects(this, 'design')">UI/UX & Branding</button>
+      <button class="pill-btn" onclick="filterProjects(this, 'marketing')">Digital Marketing</button>
+    </div>
+
+    <!-- Micro-Project Grid -->
+    <div class="exp-grid" id="expGrid">
+
+      <!-- Brief 1 -->
+      <div class="exp-card" data-category="web">
+        <div>
+          <div class="exp-card-header">
+            <div class="exp-client-info">
+              <div class="exp-client-avatar">KS</div>
+              <div>
+                <div class="exp-client-name">KiliShop E-Commerce</div>
+                <div class="exp-client-type">Retail Startup • Nairobi</div>
+              </div>
+            </div>
+            <span class="exp-duration-badge">3 Days Work</span>
+          </div>
+          <h3>E-Commerce Mobile UX Audit</h3>
+          <p>Analyze cart abandonment points on KiliShop's mobile site and produce an actionable UX audit report.</p>
+          
+          <div class="exp-deliverables-title">Expected Deliverables</div>
+          <ul class="exp-deliverables-list">
+            <li>5 Usability bug breakdowns</li>
+            <li>Figma UI redesign proposal</li>
+            <li>1-Page summary report</li>
+          </ul>
+        </div>
+        <div class="exp-footer">
+          <span class="exp-reward-text">★ Verified Portfolio Badge</span>
+          <button class="btn btn-primary" onclick="openProjectModal('E-Commerce Mobile UX Audit', 'KiliShop E-Commerce')">Start Brief →</button>
+        </div>
+      </div>
+
+      <!-- Brief 2 -->
+      <div class="exp-card" data-category="data">
+        <div>
+          <div class="exp-card-header">
+            <div class="exp-client-info">
+              <div class="exp-client-avatar">AH</div>
+              <div>
+                <div class="exp-client-name">AfriHealth Logistics</div>
+                <div class="exp-client-type">HealthTech • Lagos</div>
+              </div>
+            </div>
+            <span class="exp-duration-badge">1 Week Work</span>
+          </div>
+          <h3>Supply Chain Delivery Analytics</h3>
+          <p>Clean raw shipment logs and build a dashboard tracking delivery times across 4 West African cities.</p>
+
+          <div class="exp-deliverables-title">Expected Deliverables</div>
+          <ul class="exp-deliverables-list">
+            <li>Cleaned CSV dataset</li>
+            <li>Interactive Excel/Python Dashboard</li>
+            <li>Key metric breakdown slides</li>
+          </ul>
+        </div>
+        <div class="exp-footer">
+          <span class="exp-reward-text">★ Verified Portfolio Badge</span>
+          <button class="btn btn-primary" onclick="openProjectModal('Supply Chain Delivery Analytics', 'AfriHealth Logistics')">Start Brief →</button>
+        </div>
+      </div>
+
+      <!-- Brief 3 -->
+      <div class="exp-card" data-category="marketing">
+        <div>
+          <div class="exp-card-header">
+            <div class="exp-client-info">
+              <div class="exp-client-avatar">ZB</div>
+              <div>
+                <div class="exp-client-name">Zambesi FinTech</div>
+                <div class="exp-client-type">Financial Services • Lusaka</div>
+              </div>
+            </div>
+            <span class="exp-duration-badge">5 Days Work</span>
+          </div>
+          <h3>Youth Financial Literacy Campaign</h3>
+          <p>Design a 14-day social media campaign strategy with copy and graphics to promote savings habits in young adults.</p>
+
+          <div class="exp-deliverables-title">Expected Deliverables</div>
+          <ul class="exp-deliverables-list">
+            <li>10 Social media post graphics</li>
+            <li>Campaign caption calendar</li>
+            <li>Hashtag & distribution plan</li>
+          </ul>
+        </div>
+        <div class="exp-footer">
+          <span class="exp-reward-text">★ Verified Portfolio Badge</span>
+          <button class="btn btn-primary" onclick="openProjectModal('Youth Financial Literacy Campaign', 'Zambesi FinTech')">Start Brief →</button>
+        </div>
+      </div>
+
+      <!-- Brief 4 -->
+      <div class="exp-card" data-category="web">
+        <div>
+          <div class="exp-card-header">
+            <div class="exp-client-info">
+              <div class="exp-client-avatar">AP</div>
+              <div>
+                <div class="exp-client-name">AfriPath Platform</div>
+                <div class="exp-client-type">Internal Open Source</div>
+              </div>
+            </div>
+            <span class="exp-duration-badge">4 Days Work</span>
+          </div>
+          <h3>Responsive Non-Profit Landing Page</h3>
+          <p>Develop a clean HTML/CSS/JS landing page template for youth empowerment partners in East Africa.</p>
+
+          <div class="exp-deliverables-title">Expected Deliverables</div>
+          <ul class="exp-deliverables-list">
+            <li>Mobile-first HTML template</li>
+            <li>Zero inline style formatting</li>
+            <li>GitHub Repository Submission</li>
+          </ul>
+        </div>
+        <div class="exp-footer">
+          <span class="exp-reward-text">★ Verified Portfolio Badge</span>
+          <button class="btn btn-primary" onclick="openProjectModal('Responsive Landing Page', 'AfriPath Platform')">Start Brief →</button>
+        </div>
+      </div>
+
+      <!-- Brief 5 -->
+      <div class="exp-card" data-category="design">
+        <div>
+          <div class="exp-card-header">
+            <div class="exp-client-info">
+              <div class="exp-client-avatar">FA</div>
+              <div>
+                <div class="exp-client-name">FarmAgro Tech</div>
+                <div class="exp-client-type">AgriTech • Accra</div>
+              </div>
+            </div>
+            <span class="exp-duration-badge">3 Days Work</span>
+          </div>
+          <h3>Farmer Mobile App UI System</h3>
+          <p>Create high-contrast, easy-to-read UI screens for smallholder farmers tracking crop prices.</p>
+
+          <div class="exp-deliverables-title">Expected Deliverables</div>
+          <ul class="exp-deliverables-list">
+            <li>3 Figma high-fidelity screens</li>
+            <li>Accessible icon selection</li>
+            <li>Color hierarchy system</li>
+          </ul>
+        </div>
+        <div class="exp-footer">
+          <span class="exp-reward-text">★ Verified Portfolio Badge</span>
+          <button class="btn btn-primary" onclick="openProjectModal('Farmer Mobile App UI System', 'FarmAgro Tech')">Start Brief →</button>
+        </div>
+      </div>
+
+      <!-- Brief 6 -->
+      <div class="exp-card" data-category="data">
+        <div>
+          <div class="exp-card-header">
+            <div class="exp-client-info">
+              <div class="exp-client-avatar">SE</div>
+              <div>
+                <div class="exp-client-name">SolarEmpower</div>
+                <div class="exp-client-type">Clean Energy • Kigali</div>
+              </div>
+            </div>
+            <span class="exp-duration-badge">1 Week Work</span>
+          </div>
+          <h3>Customer Churn Prediction Dataset</h3>
+          <p>Analyze rural solar plan subscriptions to identify risk factors for customer payment drop-off.</p>
+
+          <div class="exp-deliverables-title">Expected Deliverables</div>
+          <ul class="exp-deliverables-list">
+            <li>Exploratory data analysis report</li>
+            <li>Risk factor chart visualizer</li>
+            <li>Actionable mitigation recommendations</li>
+          </ul>
+        </div>
+        <div class="exp-footer">
+          <span class="exp-reward-text">★ Verified Portfolio Badge</span>
+          <button class="btn btn-primary" onclick="openProjectModal('Customer Churn Prediction Dataset', 'SolarEmpower')">Start Brief →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ START PROJECT MODAL ============ -->
+<div class="modal-overlay" id="projectModal">
+  <div class="modal-card">
+    <h3 id="modalProjectTitle">Start Project Brief</h3>
+    <p id="modalClientName" class="text-muted mb-20">Partner Client</p>
+
+    <div class="form-group">
+      <label class="form-label">Select Workspace Role</label>
+      <select class="form-input">
+        <option>Solo Contributor (Individual Portfolio)</option>
+        <option>Team Sprint (Join Peer Group)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Estimated Completion Target</label>
+      <input type="date" class="form-input" value="2026-09-01">
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-dark" onclick="closeProjectModal()">Cancel</button>
+      <button class="btn btn-gold" onclick="submitProjectStart()">Claim Brief & Start 🚀</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Afri<span>Path</span></div>
+        <p class="mt-12 text-sm max-w-280">Reducing youth unemployment by connecting young people across Africa to opportunities, skills, practical experience and employers — in one platform.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="opportunities.html">Opportunities Finder</a>
+        <a href="skills.html">Skills Finder</a>
+        <a href="experience.html">Experience Builder</a>
+        <a href="employers.html">Employers Hub</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="Services.html">Overview</a>
+        <a href="giving.html">Giving Platform</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h4>Trust & Legal</h4>
+        <a href="index.html#trust">Verification</a>
+        <a href="contact.html">Safety & Reporting</a>
+        <a href="contact.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 AfriPath. Built for Africa's next generation.</span>
+      <span>DISCOVER → DEVELOP → EXPERIENCE → CONNECT</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ INTERACTIVE SCRIPTS ============ -->
+<script>
+  // Filter logic
+  function filterProjects(btnElement, category) {
+    document.querySelectorAll('.category-pills .pill-btn').forEach(btn => btn.classList.remove('active'));
+    btnElement.classList.add('active');
+
+    const cards = document.querySelectorAll('.exp-card');
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      if (category === 'all' || cardCat === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Modal logic
+  function openProjectModal(title, client) {
+    document.getElementById('modalProjectTitle').innerText = title;
+    document.getElementById('modalClientName').innerText = `Client Sponsor: ${client}`;
+    document.getElementById('projectModal').classList.add('open');
+  }
+
+  function closeProjectModal() {
+    document.getElementById('projectModal').classList.remove('open');
+  }
+
+  function submitProjectStart() {
+    alert('🚀 Project brief claimed! Brief guidelines and downloadable assets have been sent to your AfriPath portal.');
+    closeProjectModal();
+  }
+</script>
+
+</body>
+</html>

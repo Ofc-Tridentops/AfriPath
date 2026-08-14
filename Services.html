@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services & Pathways — AfriPath</title>
+  <meta name="description" content="Explore AfriPath's core services: Opportunities Finder, Skills Finder, Experience Builder, and Employers Hub." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header>
+  <div class="container nav">
+    <a href="Afripath.html" class="logo"><span class="logo-mark">A</span>AfriPath</a>
+    <nav class="nav-links">
+      <a href="Afripath.html">Home</a>
+      <a href="About.html">About</a>
+      
+      <!-- Services Dropdown -->
+      <div class="nav-dropdown">
+        <a href="Services.html" class="active">Services</a>
+        <div class="dropdown-menu">
+          <a href="Opportunities.html">🔎 Opportunities Finder</a>
+          <a href="skills.html">📚 Skills Finder</a>
+          <a href="Experiences.html">🛠️ Experience Builder</a>
+          <a href="Employershub.html">🏢 Employers Hub</a>
+        </div>
+      </div>
+
+      <a href="Giving.html">Giving</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="Giving.html" class="btn btn-gold btn-nav-gold">💛 Support Youth</a>
+      <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-menu" id="mmenu">
+    <a href="Afripath.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Services.html">Services Overview</a>
+    <div class="mobile-sub-menu">
+      <a href="Opportunities.html">↳ 🔎 Opportunities Finder</a>
+      <a href="skills.html">↳ 📚 Skills Finder</a>
+      <a href="Experiences.html">↳ 🛠️ Experience Builder</a>
+      <a href="Employershub.html">↳ 🏢 Employers Hub</a>
+    </div>
+    <a href="Giving.html">Giving</a>
+    <a href="Contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">🛠️ Platform Capabilities</span>
+      <h1>Four connected pathways to <span>career growth</span>.</h1>
+      <p>AfriPath brings together job discovery, skill assessments, real-world experience, and verified employer connections into four dedicated modules.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES DIRECTORY ============ -->
+<section>
+  <div class="container">
+    <span class="eyebrow">Services Overview</span>
+    <h2 class="section-title">Explore the core modules</h2>
+    <p class="section-lead">Click into any service below to open the full interactive tool and start your career journey.</p>
+
+    <div class="services-grid">
+      
+      <!-- Sub-File 1: Opportunities Finder -->
+      <div class="service-card">
+        <div>
+          <div class="service-card-header">
+            <div class="service-card-icon">🔎</div>
+            <div>
+              <span class="service-card-tag">Module 01</span>
+              <h3>Opportunities Finder</h3>
+            </div>
+          </div>
+          <p>Discover entry-level roles, internships, grants, and learning opportunities tailored specifically for young African talent.</p>
+          <ul class="service-card-features">
+            <li>Verified employer job listings</li>
+            <li>Filtered by location, region & remote work</li>
+            <li>Scholarship & grant matching</li>
+          </ul>
+        </div>
+        <a href="Opportunities.html" class="btn btn-primary">Open Opportunities Finder →</a>
+      </div>
+
+      <!-- Sub-File 2: Skills Finder -->
+      <div class="service-card">
+        <div>
+          <div class="service-card-header">
+            <div class="service-card-icon">📚</div>
+            <div>
+              <span class="service-card-tag">Module 02</span>
+              <h3>Skills Finder</h3>
+            </div>
+          </div>
+          <p>Assess your current capabilities, identify qualification gaps, and complete targeted micro-courses to upgrade your career readiness.</p>
+          <ul class="service-card-features">
+            <li>Self-paced skill diagnostic tests</li>
+            <li>Actionable learning pathways</li>
+            <li>Skill badge certifications</li>
+          </ul>
+        </div>
+        <a href="skills.html" class="btn btn-primary">Open Skills Finder →</a>
+      </div>
+
+      <!-- Sub-File 3: Experience Builder -->
+      <div class="service-card">
+        <div>
+          <div class="service-card-header">
+            <div class="service-card-icon">🛠️</div>
+            <div>
+              <span class="service-card-tag">Module 03</span>
+              <h3>Experience Builder</h3>
+            </div>
+          </div>
+          <p>Break the "no experience, no job" trap through virtual internships, real-world industry tasks, and practical portfolio projects.</p>
+          <ul class="service-card-features">
+            <li>Hands-on micro-project briefs</li>
+            <li>Mentorship-guided portfolio building</li>
+            <li>Verified employer project sign-offs</li>
+          </ul>
+        </div>
+        <a href="Experiences.html" class="btn btn-primary">Open Experience Builder →</a>
+      </div>
+
+      <!-- Sub-File 4: Employers Hub -->
+      <div class="service-card">
+        <div>
+          <div class="service-card-header">
+            <div class="service-card-icon">🏢</div>
+            <div>
+              <span class="service-card-tag">Module 04</span>
+              <h3>Employers Hub</h3>
+            </div>
+          </div>
+          <p>Connecting verified employers, startups, and organizations directly with job-ready candidates based on verified skills.</p>
+          <ul class="service-card-features">
+            <li>Employer verification system</li>
+            <li>Talent search & candidate matching</li>
+            <li>Direct messaging & interview scheduling</li>
+          </ul>
+        </div>
+        <a href="Employershub.html" class="btn btn-primary">Open Employers Hub →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE PREVIEWS ============ -->
+<section class="preview-section">
+  <div class="container">
+    <span class="eyebrow">Interactive Sampler</span>
+    <h2 class="section-title">What to expect inside each module</h2>
+    <p class="section-lead">Click the tabs below to preview sample tools and workflows from each module.</p>
+
+    <!-- Navigation Tabs -->
+    <div class="preview-tabs">
+      <button class="tab-btn active" onclick="switchTab(event, 'preview-opps')">🔎 Opportunities Sample</button>
+      <button class="tab-btn" onclick="switchTab(event, 'preview-skills')">📚 Skills Sample</button>
+      <button class="tab-btn" onclick="switchTab(event, 'preview-exp')">🛠️ Experience Sample</button>
+      <button class="tab-btn" onclick="switchTab(event, 'preview-emp')">🏢 Employer Sample</button>
+    </div>
+
+    <!-- Tab 1 Preview: Opportunities -->
+    <div id="preview-opps" class="tab-content active">
+      <h3>Sample Opportunities Preview</h3>
+      <p style="color:var(--muted); margin-bottom:12px;">Here is how live opportunities are presented in the Opportunities Finder module:</p>
+      
+      <div class="demo-box">
+        <div class="demo-item">
+          <div>
+            <strong>Junior Web Developer</strong>
+            <p style="font-size:13px; color:var(--muted)">Nairobi, Kenya • Hybrid</p>
+          </div>
+          <span class="demo-badge">Verified Listing</span>
+        </div>
+        <div class="demo-item">
+          <div>
+            <strong>Data Entry & Analytics Internship</strong>
+            <p style="font-size:13px; color:var(--muted)">Lagos, Nigeria • Remote</p>
+          </div>
+          <span class="demo-badge">Micro-Stipend</span>
+        </div>
+      </div>
+      <div style="margin-top:20px;">
+        <a href="Opportunities.html" class="btn btn-gold">Launch Full Opportunities Finder →</a>
+      </div>
+    </div>
+
+    <!-- Tab 2 Preview: Skills -->
+    <div id="preview-skills" class="tab-content">
+      <h3>Sample Skills Tracker</h3>
+      <p style="color:var(--muted); margin-bottom:12px;">Track your progress across target technical and soft skills:</p>
+      
+      <div class="demo-box">
+        <div style="margin-bottom:16px;">
+          <div style="display:flex; justify-content:space-between; font-weight:600;">
+            <span>Digital Marketing Basics</span>
+            <span>75% Completed</span>
+          </div>
+          <div class="demo-progress-bg"><div class="demo-progress-fill w-75"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between; font-weight:600;">
+            <span>Python Programming Essentials</span>
+            <span>45% Completed</span>
+          </div>
+          <div class="demo-progress-bg"><div class="demo-progress-fill w-45"></div></div>
+        </div>
+      </div>
+      <div style="margin-top:20px;">
+        <a href="skills.html" class="btn btn-gold">Launch Full Skills Finder →</a>
+      </div>
+    </div>
+
+    <!-- Tab 3 Preview: Experience -->
+    <div id="preview-exp" class="tab-content">
+      <h3>Sample Portfolio Project Brief</h3>
+      <p style="color:var(--muted); margin-bottom:12px;">Build real practical work that proves your skills to future employers:</p>
+      
+      <div class="demo-box">
+        <div class="demo-item">
+          <div>
+            <strong>Project: E-Commerce Landing Page Audit</strong>
+            <p style="font-size:13px; color:var(--muted)">Review UX bugs and design improvements for a local business partner.</p>
+          </div>
+          <span class="demo-badge">3 Days Work</span>
+        </div>
+      </div>
+      <div style="margin-top:20px;">
+        <a href="Experiences.html" class="btn btn-gold">Launch Full Experience Builder →</a>
+      </div>
+    </div>
+
+    <!-- Tab 4 Preview: Employers Hub -->
+    <div id="preview-emp" class="tab-content">
+      <h3>Sample Talent Match Cards</h3>
+      <p style="color:var(--muted); margin-bottom:12px;">How employers view verified candidates ready for hire:</p>
+      
+      <div class="demo-box">
+        <div class="demo-item">
+          <div>
+            <strong>Kofi A. — Front-End Developer</strong>
+            <p style="font-size:13px; color:var(--muted)">Accra, Ghana • 3 Verified Projects Completed</p>
+          </div>
+          <span class="demo-badge">92% Skill Match</span>
+        </div>
+      </div>
+      <div style="margin-top:20px;">
+        <a href="Employershub.html" class="btn btn-gold">Launch Full Employers Hub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-final">
+  <div class="container">
+    <span class="eyebrow">Get Started</span>
+    <h2>Ready to take the next step in your career journey?</h2>
+    <p>Choose a module above or explore how you can sponsor youth through our giving platform.</p>
+    <div class="hero-ctas">
+      <a href="Opportunities.html" class="btn btn-gold">Find Opportunities Now →</a>
+      <a href="Giving.html" class="btn btn-primary">Support Youth Pathways</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Afri<span>Path</span></div>
+        <p style="margin-top:12px;font-size:14px;max-width:280px">Reducing youth unemployment by connecting young people across Africa to opportunities, skills, practical experience and employers — in one platform.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="Opportunities.html">Opportunities Finder</a>
+        <a href="skills.html">Skills Finder</a>
+        <a href="Experiences.html">Experience Builder</a>
+        <a href="Employershub.html">Employers Hub</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="Services.html">Overview</a>
+        <a href="Giving.html">Giving Platform</a>
+        <a href="Contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h4>Trust & Legal</h4>
+        <a href="Afripath.html">Verification</a>
+        <a href="Contact.html">Safety & Reporting</a>
+        <a href="Contact.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 AfriPath. Built for Africa's next generation.</span>
+      <span>DISCOVER → DEVELOP → EXPERIENCE → CONNECT</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ TAB SWITCHING SCRIPT ============ -->
+<script>
+  function switchTab(evt, tabId) {
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(content => content.classList.remove('active'));
+
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    evt.currentTarget.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
