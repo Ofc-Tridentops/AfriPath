@@ -1,256 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AfriPath — From Potential to Employment</title>
-  <meta name="description" content="AfriPath connects youth in Africa to opportunities, skills, verified experience and employers in one platform." />
+  <meta name="description" content="AfriPath connects youth in Africa to opportunities, skills, verified experience and employers in one platform.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- ============ NAVIGATION ============ -->
-<header>
-  <div class="container nav">
-    <a href="Afripath.html" class="logo"><span class="logo-mark">A</span>AfriPath</a>
-    <nav class="nav-links">
-      <a href="Afripath.html" class="active">Home</a>
+  <header>
+    <div class="container nav">
+      <a href="Afripath.html" class="logo"><span class="logo-mark">A</span>AfriPath</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="Afripath.html" class="active">Home</a>
+        <a href="About.html">About</a>
+        <a href="Services.html">Services</a>
+        <a href="Giving.html">Giving</a>
+        <a href="Contact.html">Contact Us</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="Giving.html" class="btn btn-gold btn-nav-gold">💛 Support Youth</a>
+        <button class="burger" type="button" aria-label="Open navigation menu" aria-controls="mmenu" aria-expanded="false" onclick="const menu = document.getElementById('mmenu'); const open = menu.classList.toggle('open'); this.setAttribute('aria-expanded', open);">☰</button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mmenu" aria-label="Mobile navigation">
+      <a href="Afripath.html">Home</a>
       <a href="About.html">About</a>
       <a href="Services.html">Services</a>
       <a href="Giving.html">Giving</a>
       <a href="Contact.html">Contact Us</a>
     </nav>
-    <div class="nav-cta">
-      <a href="giving.html" class="btn btn-gold btn-nav-gold">💛 Support Youth</a>
-      <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')">☰</button>
-    </div>
-  </div>
-  <nav class="mobile-menu" id="mmenu">
-    <a href="Afripath.html">Home</a>
-    <a href="About.html">About</a>
-    <a href="Services.html">Services</a>
-    <a href="Giving.html">Giving</a>
-    <a href="ontact.html">Contact Us</a>
-  </nav>
-</header>
+  </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <span class="eyebrow">🌍 Built for Africa's youth</span>
-      <h1>Turn <span>potential</span> into <em>employment</em>.</h1>
-      <p>AfriPath connects young people across Africa to opportunities, skills, verified experience and employers — all on one unified platform.</p>
-      <div class="hero-ctas">
-        <a href="About.html" class="btn btn-gold">Learn About Our Mission →</a>
-        <a href="Services.html" class="btn btn-dark">Explore Our Services</a>
-      </div>
-      <div class="hero-stats">
-        <div><strong>54%</strong><span>of Africa's population is under 25</span></div>
-        <div><strong>1</strong><span>platform for the whole journey</span></div>
-        <div><strong>4</strong><span>connected pathways to work</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MARQUEE ============ -->
-<div class="marquee">
-  <div class="marquee-track">
-    <span>🔎 <b>DISCOVER</b></span><span>→</span>
-    <span>📚 <b>DEVELOP</b></span><span>→</span>
-    <span>🛠 <b>EXPERIENCE</b></span><span>→</span>
-    <span>🏢 <b>CONNECT</b></span><span>→</span>
-    <span>💼 <b>EMPLOYMENT</b></span><span>→</span>
-    <span>🔎 <b>DISCOVER</b></span><span>→</span>
-    <span>📚 <b>DEVELOP</b></span><span>→</span>
-    <span>🛠 <b>EXPERIENCE</b></span><span>→</span>
-    <span>🏢 <b>CONNECT</b></span><span>→</span>
-    <span>💼 <b>EMPLOYMENT</b></span><span>→</span>
-  </div>
-</div>
-
-<!-- ============ PROBLEM ============ -->
-<section class="problem">
-  <div class="container problem-grid">
-    <div>
-      <span class="eyebrow">The problem</span>
-      <h2 class="section-title">The experience trap is locking young people out.</h2>
-      <p class="section-lead">Young people face systemic barriers to entering the workforce. Even when opportunities exist, they are blocked by key gaps:</p>
-      <ul class="check-list">
-        <li>Where to find verified opportunities</li>
-        <li>Knowing whether they qualify for available roles</li>
-        <li>Which skills they need to close the qualification gap</li>
-        <li>How to gain experience without having a first job</li>
-        <li>Direct, transparent access to employers</li>
-      </ul>
-    </div>
-    <div class="cycle">
-      <h3 style="margin-bottom:6px">The cycle we break</h3>
-      <p style="font-size:13.5px;color:var(--muted)">Millions of talented young people are stuck in this loop:</p>
-      <div class="cycle-step"><span class="ic">🚫</span> No job</div>
-      <div class="cycle-arrow">↓</div>
-      <div class="cycle-step"><span class="ic">📄</span> No experience</div>
-      <div class="cycle-arrow">↓</div>
-      <div class="cycle-step"><span class="ic">🔁</span> No experience → can't get a job</div>
-      <div class="cycle-box">
-        <b style="color:var(--green)">AfriPath connects all four pieces</b> — opportunities, skills, experience and employers — into one continuous pathway.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ABOUT, GOAL & MISSION ============ -->
-<section class="about-section" id="about">
-  <div class="container">
-    <span class="eyebrow">Who We Are</span>
-    <h2 class="section-title">Bridging the gap between potential and employment.</h2>
-    <p class="section-lead">AfriPath was built to rewrite the narrative for Africa's young talent through integrated pathways, skill building, and transparent opportunities.</p>
-    
-    <div class="about-grid">
-      <!-- What AfriPath is About -->
-      <div class="about-card">
-        <div>
-          <div class="icon">🌍</div>
-          <h3>What AfriPath Is About</h3>
-          <p>AfriPath is a pan-African ecosystem designed to give every young person direct, equal access to career pathways. We unify job searching, targeted skill assessment, practical project work, and employer discovery into a single, seamless digital career journey.</p>
-        </div>
-      </div>
-
-      <!-- Our Goal -->
-      <div class="about-card">
-        <div>
-          <div class="icon">🎯</div>
-          <h3>Our Goal</h3>
-          <p>To eliminate the "no experience, no job" trap across Africa. We aim to equip 1 million young leaders with verified skill profiles, hands-on portfolio projects, and direct connections to fair employers by 2030.</p>
-        </div>
-      </div>
-
-      <!-- Our Mission Statement -->
-      <div class="about-card">
-        <div>
-          <div class="icon">🚀</div>
-          <h3>Our Mission Statement</h3>
-          <p>"To empower Africa’s youth by transforming raw talent into verified expertise, bridging skill gaps through actionable learning, and opening direct pathways to sustainable, dignified employment."</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ GIVING PLATFORM ============ -->
-<section class="giving-section" id="give">
-  <div class="container">
-    <div class="giving-grid">
-      <div>
-        <span class="eyebrow eyebrow-gold">💛 Giving & Sponsorship Platform</span>
-        <h2 class="section-title">Fund a youth pathway. Change a lifetime.</h2>
-        <p class="section-lead">Your financial support directly sponsors young people through skill development courses, micro-project stipends, and identity verification—removing financial barriers on their road to employment.</p>
-        
-        <div style="margin-top:28px">
-          <a href="giving.html" class="btn btn-gold">Sponsor a Young Person Now →</a>
-        </div>
-      </div>
-
-      <div class="giving-options">
-        <div class="give-card">
-          <div class="give-info">
-            <h4>Sponsor 1 Youth Career Passport</h4>
-            <p>Covers skill assessments, verification, and mentorship for 1 youth.</p>
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">🌍 Built for Africa's youth</span>
+          <h1>Turn <span>potential</span> into <em>employment</em>.</h1>
+          <p>AfriPath connects young people across Africa to opportunities, skills, verified experience and employers — all on one unified platform.</p>
+          <div class="hero-ctas">
+            <a href="About.html" class="btn btn-gold">Learn About Our Mission →</a>
+            <a href="Services.html" class="btn btn-dark">Explore Our Services</a>
           </div>
-          <div class="give-amount">$25</div>
-        </div>
-
-        <div class="give-card">
-          <div class="give-info">
-            <h4>Fund 1 Micro-Project Stipend</h4>
-            <p>Provides a stipend for a youth completing their first real-world project.</p>
+          <div class="hero-stats">
+            <div><strong>54%</strong><span>of Africa's population is under 25</span></div>
+            <div><strong>1</strong><span>platform for the whole journey</span></div>
+            <div><strong>4</strong><span>connected pathways to work</span></div>
           </div>
-          <div class="give-amount">$75</div>
         </div>
+      </div>
+    </section>
 
-        <div class="give-card">
-          <div class="give-info">
-            <h4>Sponsor a Cohort (10 Youth)</h4>
-            <p>Full-spectrum access from skill development to job matching.</p>
+    <div class="marquee" aria-label="AfriPath pathway">
+      <div class="marquee-track">
+        <span>🔎 <b>DISCOVER</b></span><span>→</span>
+        <span>📚 <b>DEVELOP</b></span><span>→</span>
+        <span>🛠 <b>EXPERIENCE</b></span><span>→</span>
+        <span>🏢 <b>CONNECT</b></span><span>→</span>
+        <span>💼 <b>EMPLOYMENT</b></span><span>→</span>
+        <span>🔎 <b>DISCOVER</b></span><span>→</span>
+        <span>📚 <b>DEVELOP</b></span><span>→</span>
+        <span>🛠 <b>EXPERIENCE</b></span><span>→</span>
+        <span>🏢 <b>CONNECT</b></span><span>→</span>
+        <span>💼 <b>EMPLOYMENT</b></span><span>→</span>
+      </div>
+    </div>
+
+    <section class="problem">
+      <div class="container problem-grid">
+        <div>
+          <span class="eyebrow">The problem</span>
+          <h2 class="section-title">The experience trap is locking young people out.</h2>
+          <p class="section-lead">Young people face systemic barriers to entering the workforce. Even when opportunities exist, they are blocked by key gaps:</p>
+          <ul class="check-list">
+            <li>Where to find verified opportunities</li>
+            <li>Knowing whether they qualify for available roles</li>
+            <li>Which skills they need to close the qualification gap</li>
+            <li>How to gain experience without having a first job</li>
+            <li>Direct, transparent access to employers</li>
+          </ul>
+        </div>
+        <div class="cycle">
+          <h3>The cycle we break</h3>
+          <p class="cycle-intro">Millions of talented young people are stuck in this loop:</p>
+          <div class="cycle-step"><span class="ic">🚫</span> No job</div>
+          <div class="cycle-arrow">↓</div>
+          <div class="cycle-step"><span class="ic">📄</span> No experience</div>
+          <div class="cycle-arrow">↓</div>
+          <div class="cycle-step"><span class="ic">🔁</span> No experience → can't get a job</div>
+          <div class="cycle-box"><b>AfriPath connects all four pieces</b> — opportunities, skills, experience and employers — into one continuous pathway.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container">
+        <span class="eyebrow">Who We Are</span>
+        <h2 class="section-title">Bridging the gap between potential and employment.</h2>
+        <p class="section-lead">AfriPath was built to rewrite the narrative for Africa's young talent through integrated pathways, skill building, and transparent opportunities.</p>
+        <div class="about-grid">
+          <div class="about-card"><div><div class="icon">🌍</div><h3>What AfriPath Is About</h3><p>AfriPath is a pan-African ecosystem designed to give every young person direct, equal access to career pathways. We unify job searching, targeted skill assessment, practical project work, verified experience and employer connections.</p></div></div>
+          <div class="about-card"><div><div class="icon">🎯</div><h3>Our Goal</h3><p>To eliminate the “no experience, no job” trap across Africa. We aim to equip 1 million young leaders with verified skill profiles, hands-on portfolio projects and direct connections to employers.</p></div></div>
+          <div class="about-card"><div><div class="icon">🚀</div><h3>Our Mission Statement</h3><p>To empower Africa’s youth by transforming raw talent into verified expertise, bridging skill gaps through actionable learning, and opening direct pathways to sustainable, dignified employment.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="giving-section" id="give">
+      <div class="container">
+        <div class="giving-grid">
+          <div>
+            <span class="eyebrow eyebrow-gold">💛 Giving &amp; Sponsorship Platform</span>
+            <h2 class="section-title">Fund a youth pathway. Change a lifetime.</h2>
+            <p class="section-lead">Your financial support directly sponsors young people through skill development courses, micro-project stipends and identity verification — removing financial barriers to opportunity.</p>
+            <div style="margin-top: 28px"><a href="Giving.html" class="btn btn-gold">Sponsor a Young Person Now →</a></div>
           </div>
-          <div class="give-amount">$250</div>
+          <div class="giving-options">
+            <div class="give-card"><div class="give-info"><h4>Sponsor 1 Youth Career Passport</h4><p>Covers skill assessments, verification and mentorship for 1 youth.</p></div><div class="give-amount">$25</div></div>
+            <div class="give-card"><div class="give-info"><h4>Fund 1 Micro-Project Stipend</h4><p>Provides a stipend for a youth completing their first real-world project.</p></div><div class="give-amount">$75</div></div>
+            <div class="give-card"><div class="give-info"><h4>Sponsor a Cohort (10 Youth)</h4><p>Full-spectrum access from skill development to job matching.</p></div><div class="give-amount">$250</div></div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============ TRUST ============ -->
-<section class="trust-section">
-  <div class="container">
-    <div class="trust">
-      <div>
-        <span class="eyebrow eyebrow-gold">🛡️ Trust & Safety</span>
-        <h2 style="margin-top:12px">A trusted ecosystem, by design.</h2>
-        <p>Young people and employers demand protection. Verification and reporting are built into every layer of AfriPath — not bolted on after.</p>
+    <section class="trust-section" id="trust">
+      <div class="container">
+        <div class="trust">
+          <div><span class="eyebrow eyebrow-gold">🛡️ Trust &amp; Safety</span><h2>A trusted ecosystem, by design.</h2><p>Young people and employers demand protection. Verification and reporting are built into every layer of AfriPath — not bolted on after.</p></div>
+          <div class="trust-badges">
+            <div class="t-badge"><span class="em">🟢</span><b>Verified Employers</b><span>Every organisation is checked before posting.</span></div>
+            <div class="t-badge"><span class="em">🟢</span><b>Verified Opportunities</b><span>Listings are screened for legitimacy and fairness.</span></div>
+            <div class="t-badge"><span class="em">🚩</span><b>Report &amp; Flag</b><span>Report scams, suspicious employers or inappropriate listings.</span></div>
+            <div class="t-badge"><span class="em">⭐</span><b>Verified Experience</b><span>Employer-confirmed work that can't be faked.</span></div>
+          </div>
+        </div>
       </div>
-      <div class="trust-badges">
-        <div class="t-badge"><span class="em">🟢</span><b>Verified Employers</b><span>Every organisation is checked before posting.</span></div>
-        <div class="t-badge"><span class="em">🟢</span><b>Verified Opportunities</b><span>Listings are screened for legitimacy and fairness.</span></div>
-        <div class="t-badge"><span class="em">🚩</span><b>Report & Flag</b><span>Report scams, suspicious employers or inappropriate listings.</span></div>
-        <div class="t-badge"><span class="em">⭐</span><b>Verified Experience</b><span>Employer-confirmed work that can't be faked.</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============ CTA ============ -->
-<section class="cta-final" id="cta">
-  <div class="container">
-    <span class="eyebrow">Join AfriPath</span>
-    <h2>AfriPath doesn't just help young people find jobs.<br>It builds the pathway from <span style="color:var(--green)">potential</span> to <span style="color:var(--gold)">employment</span>.</h2>
-    <p>For youth, schools, NGOs, employers and partners — one platform, one journey, one goal.</p>
-    <div class="hero-ctas">
-      <a href="Services.html" class="btn btn-gold">Explore Platform Services →</a>
-      <a href="giving.html" class="btn btn-primary">Support Our Mission</a>
-    </div>
-  </div>
-</section>
+    <section class="cta-final" id="cta">
+      <div class="container"><span class="eyebrow">Join AfriPath</span><h2>AfriPath doesn't just help young people find jobs.<br>It builds the pathway from <span style="color:var(--green)">potential</span> to <span style="color:var(--gold)">employment</span>.</h2><p>For youth, schools, NGOs, employers and partners — one platform, one journey, one goal.</p><div class="hero-ctas"><a href="Services.html" class="btn btn-gold">Explore Platform Services →</a><a href="Giving.html" class="btn btn-primary">Support Our Mission</a></div></div>
+    </section>
+  </main>
 
-<!-- ============ FOOTER ============ -->
-<footer>
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-logo">Afri<span>Path</span></div>
-        <p style="margin-top:12px;font-size:14px;max-width:280px">Reducing youth unemployment by connecting young people across Africa to opportunities, skills, practical experience and employers — in one platform.</p>
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div><div class="foot-logo">Afri<span>Path</span></div><p style="margin-top:12px;font-size:14px;max-width:280px">Reducing youth unemployment by connecting young people across Africa to opportunities, skills, practical experience and employers.</p></div>
+        <div><h4>Services</h4><a href="opportunities.html">Opportunities Finder</a><a href="skills.html">Skills Finder</a><a href="experience.html">Experience Builder</a><a href="employers.html">Employers Hub</a></div>
+        <div><h4>Company</h4><a href="About.html">About Us</a><a href="Services.html">Overview</a><a href="Giving.html">Giving Platform</a><a href="Contact.html">Contact Us</a></div>
+        <div><h4>Trust &amp; Legal</h4><a href="Afripath.html#trust">Verification</a><a href="Contact.html">Safety &amp; Reporting</a><a href="Contact.html">Privacy Policy</a></div>
       </div>
-      <div>
-        <h4>Services</h4>
-        <a href="opportunities.html">Opportunities Finder</a>
-        <a href="skills.html">Skills Finder</a>
-        <a href="experience.html">Experience Builder</a>
-        <a href="employers.html">Employers Hub</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="Services.html">Overview</a>
-        <a href="giving.html">Giving Platform</a>
-        <a href="contact.html">Contact Us</a>
-      </div>
-      <div>
-        <h4>Trust & Legal</h4>
-        <a href="index.html#trust">Verification</a>
-        <a href="contact.html">Safety & Reporting</a>
-        <a href="contact.html">Privacy Policy</a>
-      </div>
+      <div class="foot-bottom"><span>© 2026 AfriPath. Built for Africa's next generation.</span><span>DISCOVER → DEVELOP → EXPERIENCE → CONNECT</span></div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 AfriPath. Built for Africa's next generation.</span>
-      <span>DISCOVER → DEVELOP → EXPERIENCE → CONNECT</span>
-    </div>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>
